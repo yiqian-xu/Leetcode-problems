@@ -15,9 +15,9 @@ class Solution(object):
         dp[3][0]=0 # the two keys on the left and right of '0' will never get pressed. 
         dp[3][2]=0
         dirs =[(1,2),(1,-2),(-1,2),(-1,-2),(2,1),(2,-1),(-2,1),(-2,-1)]
-        # looping through N-1 dials, cause number keys in the dp array are initialized with 1 as the first press
+        # looping through N-1 dials, cause the number keys in the dp array are initialized with 1 as the first press
         for _ in xrange(1,N):
-            
+            # the amount of dialed numbers when ending at a key after _+1 steps, is the total amount of dialed numbers of all the keys that can jump to this key after _ press
             n1 = dp[1][2]+dp[2][1]
             n2 = dp[2][0]+dp[2][2]   
             n3 = dp[1][0]+dp[2][1]
