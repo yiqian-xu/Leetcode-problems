@@ -1,0 +1,2 @@
+Given an API is_dirty(n) returns if a number n is dirty, write a function to remove all the dirty numbers in an array with all the non-dirty number remains the same order. 
+Time Complexity is O(n)
